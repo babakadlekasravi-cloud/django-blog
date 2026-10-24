@@ -1,11 +1,10 @@
-from django.contrib import admin
 from django.urls import path
-from blog.views import *
+from . import views
 
 app_name="blog"
 
 urlpatterns=[
-    path('',blog_home,name="home"),
-    path('single/<int:pk>/',blog_single,name="single"),
+    path('', views.blog_home,name="home"),
+    path('single/<int:pk>/',views.blog_single,name="single"),
    
 ]
